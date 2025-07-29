@@ -49,6 +49,13 @@ ions_data = {
         'description': 'White precipitate remains insoluble',
         'emoji': '🤍'
     },
+'Aluminium (Al²⁺)': {
+        'color': 'White',
+        'reagent': 'Sodium hydroxide',
+        'condition': 'In excess',
+        'description': 'White precipitate dissolves in excess',
+        'emoji': '🤍'
+    },
     'Zinc (Zn²⁺)': {
         'color': 'White',
         'reagent': 'Ammonia',
