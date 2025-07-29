@@ -45,42 +45,42 @@ ions_data = {
     'Calcium (Ca²⁺)': {
         'color': 'White',
         'reagent': 'Sodium hydroxide',
-        'condition': 'In drops then In excess',
+        'condition': 'In drops, insoluble In excess',
         'description': 'White precipitate remains insoluble in excess',
         'emoji': '🤍'
     },
 'Aluminium (Al²⁺)': {
         'color': 'White',
         'reagent': 'Sodium hydroxide',
-        'condition': 'In excess',
+        'condition': 'In drops, soluble In excess',
         'description': 'White gelatinous precipitate dissolves in excess',
         'emoji': '🤍'
     },
 'Aluminium (Al²⁺)': {
         'color': 'White',
         'reagent': 'Ammonia',
-        'condition': 'In drops then In excess',
+        'condition': 'In drops, insoluble In excess',
         'description': 'White gelatinous precipitate insoluble in excess',
         'emoji': '🤍'
     },
     'Zinc (Zn²⁺)': {
         'color': 'White',
         'reagent': 'Ammonia',
-        'condition': 'In drops then In excess',
+        'condition': 'In drops, soluble In excess',
         'description': 'White gelatinous precipitate dissolves in excess',
         'emoji': '⚪'
     },
    'Zinc (Zn²⁺)': {
         'color': 'White',
         'reagent': 'Sodium hydroxide',
-        'condition': 'In drops then In excess',
+        'condition': 'In drops, soluble In excess',
         'description': 'White gelatinous precipitate dissolves in excess',
         'emoji': '⚪'
     },
  'Lead (Pb²⁺)': {
         'color': 'White',
         'reagent': 'Ammonia',
-        'condition': 'In drops and then in excess',
+        'condition': 'In drops, insoluble In excess',
         'description': 'White precipitate insoluble in excess',
         'emoji': '◻️'},
 'Lead (Pb²⁺)': {
