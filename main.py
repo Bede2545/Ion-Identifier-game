@@ -138,11 +138,11 @@ ions_data = {
 
 def create_mystery():
     ion = random.choice(list(ions_data.keys()))
-    data = ions_data[ion]
+    clue = random.choice(ions_data[ion])
     return {
         'ion': ion,
-        'clues': f"🧪 **Lab Results:** {data['emoji']} {data['color']} precipitate with {data['reagent']} ({data['condition']})",
-        'correct_answer': ion
+        'clues': f"🧪 **Lab Results:** {clue['emoji']} {clue['color']} precipitate with {clue['reagent']} ({clue['condition']})",
+        'correct_answers': [ion]  # You can add aliases here if needed
     }
 
 def show_animated_result(is_correct, points=0):
