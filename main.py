@@ -275,15 +275,14 @@ with col1:
                 st.rerun()
 
 # Sidebar with ion reference
-with st.sidebar:
-    st.markdown("### 📚 Ion Reference Guide")
-    for ion, data in ions_data.items():
-        with st.expander(f"{data['emoji']} {ion}"):
-            st.write(f"**Color:** {data['color']}")
-            st.write(f"**Reagent:** {data['reagent']}")
-            st.write(f"**Condition:** {data['condition']}")
-            st.write(f"**Description:** {data['description']}")
-    
+for ion, clues in ions_data.items():
+    for clue in clues:
+        with st.expander(f"{clue['emoji']} {ion} ({clue['reagent']})"):
+            st.write(f"**Color:** {clue['color']}")
+            st.write(f"**Reagent:** {clue['reagent']}")
+            st.write(f"**Condition:** {clue['condition']}")
+            st.write(f"**Description:** {clue['description']}")
+
     st.markdown("### 🎮 Game Tips")
     st.markdown("- Higher levels = more points per correct answer")
     st.markdown("- Streaks multiply your score")
