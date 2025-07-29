@@ -23,14 +23,14 @@ if 'lives' not in st.session_state:
 ions_data = {
     'Copper (Cu²⁺)': [
         {
-            'color': 'Blue',
+            'color': 'Blue Gelatinous',
             'reagent': 'Ammonia',
             'condition': 'In drops, precipitate soluble In excess',
             'description': 'Forms beautiful blue precipitate soluble in excess',
             'emoji': '💙'
         },
         {
-            'color': 'Blue',
+            'color': 'Blue Gelatinous',
             'reagent': 'Sodium hydroxide',
             'condition': 'In drops, precipitate insoluble In excess',
             'description': 'Forms blue gelatinous precipitate insoluble in excess',
@@ -39,14 +39,14 @@ ions_data = {
     ],
     'Aluminium (Al³⁺)': [
         {
-            'color': 'White',
+            'color': 'White Gelatinous',
             'reagent': 'Sodium hydroxide',
             'condition': 'In drops, soluble In excess',
             'description': 'White gelatinous precipitate dissolves in excess',
             'emoji': '🤍'
         },
         {
-            'color': 'White',
+            'color': 'White Gelatinous',
             'reagent': 'Ammonia',
             'condition': 'In drops, insoluble In excess',
             'description': 'White gelatinous precipitate insoluble in excess',
@@ -119,14 +119,14 @@ ions_data = {
     ],
     'Zinc (Zn²⁺)': [
         {
-            'color': 'White',
+            'color': 'White Gelatinous',
             'reagent': 'Ammonia',
             'condition': 'In drops, soluble In excess',
             'description': 'White gelatinous precipitate dissolves in excess',
             'emoji': '🤍'
         },
         {
-            'color': 'White',
+            'color': 'White Gelatinous',
             'reagent': 'Sodium hydroxide',
             'condition': 'In drops, soluble In excess',
             'description': 'White gelatinous precipitate dissolves in excess',
