@@ -53,14 +53,14 @@ ions_data = {
         'color': 'White',
         'reagent': 'Sodium hydroxide',
         'condition': 'In excess',
-        'description': 'White precipitate dissolves in excess',
+        'description': 'White gelatinous precipitate dissolves in excess',
         'emoji': '🤍'
     },
     'Zinc (Zn²⁺)': {
         'color': 'White',
         'reagent': 'Ammonia',
-        'condition': 'In excess',
-        'description': 'White precipitate dissolves in excess',
+        'condition': 'In drops then In excess',
+        'description': 'White gelatinous precipitate dissolves in excess',
         'emoji': '⚪'
     },
     'Lead (Pb²⁺)': {
