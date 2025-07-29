@@ -24,8 +24,8 @@ ions_data = {
     'Copper (Cu²⁺)': {
         'color': 'Blue',
         'reagent': 'Ammonia',
-        'condition': 'In drops',
-        'description': 'Forms beautiful blue precipitate',
+        'condition': 'In drops and then in excess',
+        'description': 'Forms beautiful blue precipitate soluble in excess',
         'emoji': '💙'
     },
     'Iron (Fe²⁺)': {
