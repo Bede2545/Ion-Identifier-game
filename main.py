@@ -225,14 +225,18 @@ else:
         st.markdown("### 🎯 Your Identification:")
         answer = st.selectbox(
             "Which ion matches these lab results?",
-            options=list(ions_data.keys()),
-            key=f"answer_{st.session_state.score}"
-        )
-        
-        col1, col2 = st.columns(2)
-        with col1:
-            if st.button("🔬 Submit Analysis", type="primary"):
-                if answer == mystery['correct_answer']:
+
+options = list(ions_data.keys())
+key = f"answer_{st.session_state.score}"
+
+col1, col2 = st.columns(2)
+with col1:
+    if st.button("🔬 Submit Analysis", type="primary"):
+        if answer in mystery['correct_answers']:
+            # Correct answer logic
+        else:
+            # Incorrect answer logic
+          
                     # Correct answer
                     points = 10 + (st.session_state.level * 5) + (st.session_state.streak * 2)
                     st.session_state.score += points
