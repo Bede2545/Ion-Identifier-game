@@ -82,7 +82,7 @@ ions_data = {
         'reagent': 'Ammonia',
         'condition': 'In drops and then in excess',
         'description': 'White precipitate insoluble in excess',
-        'emoji': '◻️'
+        'emoji': '◻️'},
 'Lead (Pb²⁺)': {
         'color': 'White',
         'reagent': 'Sodium hydroxide',
