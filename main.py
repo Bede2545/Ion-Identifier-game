@@ -21,75 +21,119 @@ if 'lives' not in st.session_state:
 
 # Game data
 ions_data = {
-    'Copper (Cu²⁺)': {
-        'color': 'Blue',
-        'reagent': 'Ammonia',
-        'condition': 'In drops, precipitate soluble in excess',
-        'description': 'Forms beautiful blue precipitate soluble in excess',
-        'emoji': '💙'
-    },
-    'Iron (Fe²⁺)': {
-        'color': 'Green',
-        'reagent': 'Sodium hydroxide',
-        'condition': 'In drops',
-        'description': 'Creates green precipitate',
-        'emoji': '💚'
-    },
-    'Iron (Fe³⁺)': {
-        'color': 'Brown',
-        'reagent': 'Ammonia',
-        'condition': 'In drops',
-        'description': 'Forms brown precipitate',
-        'emoji': '🤎'
-    },
-    'Calcium (Ca²⁺)': {
-        'color': 'White',
-        'reagent': 'Sodium hydroxide',
-        'condition': 'In drops, insoluble In excess',
-        'description': 'White precipitate remains insoluble in excess',
-        'emoji': '🤍'
-    },
-'Aluminium (Al³⁺)': {
-        'color': 'White',
-        'reagent': 'Sodium hydroxide',
-        'condition': 'In drops, soluble In excess',
-        'description': 'White gelatinous precipitate dissolves in excess',
-        'emoji': '🤍'
-    },
-'Aluminium (Al²⁺)': {
-        'color': 'White',
-        'reagent': 'Ammonia',
-        'condition': 'In drops, insoluble In excess',
-        'description': 'White gelatinous precipitate insoluble in excess',
-        'emoji': '🤍'
-    },
-    'Zinc (Zn²⁺)': {
-        'color': 'White',
-        'reagent': 'Ammonia',
-        'condition': 'In drops, soluble In excess',
-        'description': 'White gelatinous precipitate dissolves in excess',
-        'emoji': '⚪'
-    },
-   'Zinc (Zn²⁺)': {
-        'color': 'White',
-        'reagent': 'Sodium hydroxide',
-        'condition': 'In drops, soluble In excess',
-        'description': 'White gelatinous precipitate dissolves in excess',
-        'emoji': '⚪'
-    },
- 'Lead (Pb²⁺)': {
-        'color': 'White',
-        'reagent': 'Ammonia',
-        'condition': 'In drops, insoluble In excess',
-        'description': 'White precipitate insoluble in excess',
-        'emoji': '◻️'},
-'Lead (Pb²⁺)': {
-        'color': 'White',
-        'reagent': 'Sodium hydroxide',
-        'condition': 'In drops and then in excess',
-        'description': 'White precipitate dissolves in excess',
-        'emoji': '◻️'
-    }
+    'Copper (Cu²⁺)': [
+        {
+            'color': 'Blue',
+            'reagent': 'Ammonia',
+            'condition': 'In drops, precipitate soluble In excess',
+            'description': 'Forms beautiful blue precipitate soluble in excess',
+            'emoji': '💙'
+        },
+        {
+            'color': 'Blue',
+            'reagent': 'Sodium hydroxide',
+            'condition': 'In drops, precipitate insoluble In excess',
+            'description': 'Forms blue gelatinous precipitate insoluble in excess',
+            'emoji': '💙'
+        }
+    ],
+    'Aluminium (Al³⁺)': [
+        {
+            'color': 'White',
+            'reagent': 'Sodium hydroxide',
+            'condition': 'In drops, soluble In excess',
+            'description': 'White gelatinous precipitate dissolves in excess',
+            'emoji': '🤍'
+        },
+        {
+            'color': 'White',
+            'reagent': 'Ammonia',
+            'condition': 'In drops, insoluble In excess',
+            'description': 'White gelatinous precipitate insoluble in excess',
+            'emoji': '🤍'
+        }
+    ],
+'Lead (Pb²⁺)': [
+        {
+            'color': 'White',
+            'reagent': 'Sodium hydroxide',
+            'condition': 'In drops, soluble In excess',
+            'description': 'White precipitate dissolves in excess',
+            'emoji': '🤍'
+        },
+        {
+            'color': 'White',
+            'reagent': 'Ammonia',
+            'condition': 'In drops, insoluble In excess',
+            'description': 'White precipitate insoluble in excess',
+            'emoji': '🤍'
+        }
+    ],
+'Calcium (Ca²⁺)': [
+        {
+            'color': 'White',
+            'reagent': 'Sodium hydroxide',
+            'condition': 'In drops, Insoluble In excess',
+            'description': 'White precipitate insoluble in excess',
+            'emoji': '🤍'
+        },
+        {
+            'color': 'no precipitate',
+            'reagent': 'Ammonia',
+            'condition': 'In drops and In excess',
+            'description': 'no precipitate in drops and in excess',
+            'emoji': '🤍'
+        }
+    ],
+'Iron II (Fe²⁺)': [
+        {
+            'color': 'Green',
+            'reagent': 'Sodium hydroxide',
+            'condition': 'In drops, Insoluble In excess',
+            'description': 'Dirty Green precipitate insoluble in excess',
+            'emoji': '💚'
+        },
+        {
+            'color': 'Green',
+            'reagent': 'Ammonia',
+            'condition': 'In drops,then In excess',
+            'description': 'Green precipitate Insoluble in excess',
+            'emoji': '💚'
+        }
+    ],
+'Iron III (Fe³⁺)': [
+        {
+            'color': 'Brown',
+            'reagent': 'Sodium hydroxide',
+            'condition': 'In drops, Insoluble In excess',
+            'description': 'Brown precipitate insoluble in excess',
+            'emoji': '🤎'
+        },
+        {
+            'color': 'Brown',
+            'reagent': 'Ammonia',
+            'condition': 'In drops,then In excess',
+            'description': 'Brown precipitate Insoluble in excess',
+            'emoji': '🤎'
+        }
+    ],
+    'Zinc (Zn²⁺)': [
+        {
+            'color': 'White',
+            'reagent': 'Ammonia',
+            'condition': 'In drops, soluble In excess',
+            'description': 'White gelatinous precipitate dissolves in excess',
+            'emoji': '🤍'
+        },
+        {
+            'color': 'White',
+            'reagent': 'Sodium hydroxide',
+            'condition': 'In drops, soluble In excess',
+            'description': 'White gelatinous precipitate dissolves in excess',
+            'emoji': '🤍'
+        }
+    ],
+    
 }
 
 def create_mystery():
