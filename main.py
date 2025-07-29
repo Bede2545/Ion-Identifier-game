@@ -1,4 +1,3 @@
-
 import streamlit as st
 import time
 import random
@@ -53,7 +52,7 @@ ions_data = {
             'emoji': '🤍'
         }
     ],
-'Lead (Pb²⁺)': [
+    'Lead (Pb²⁺)': [
         {
             'color': 'White',
             'reagent': 'Sodium hydroxide',
@@ -69,7 +68,7 @@ ions_data = {
             'emoji': '🤍'
         }
     ],
-'Calcium (Ca²⁺)': [
+    'Calcium (Ca²⁺)': [
         {
             'color': 'White',
             'reagent': 'Sodium hydroxide',
@@ -85,7 +84,7 @@ ions_data = {
             'emoji': '🤍'
         }
     ],
-'Iron II (Fe²⁺)': [
+    'Iron II (Fe²⁺)': [
         {
             'color': 'Green',
             'reagent': 'Sodium hydroxide',
@@ -101,7 +100,7 @@ ions_data = {
             'emoji': '💚'
         }
     ],
-'Iron III (Fe³⁺)': [
+    'Iron III (Fe³⁺)': [
         {
             'color': 'Brown',
             'reagent': 'Sodium hydroxide',
@@ -133,10 +132,10 @@ ions_data = {
             'emoji': '🤍'
         }
     ],
-    
 }
 
 def create_mystery():
+    """Create a new mystery ion challenge"""
     ion = random.choice(list(ions_data.keys()))
     clue = random.choice(ions_data[ion])
     return {
@@ -146,6 +145,7 @@ def create_mystery():
     }
 
 def show_animated_result(is_correct, points=0):
+    """Display animated result feedback"""
     if is_correct:
         st.success(f"🎉 CORRECT! +{points} points! ⭐⭐⭐")
         st.balloons()
@@ -181,6 +181,24 @@ if st.session_state.lives <= 1:
 elif st.session_state.lives == 2:
     st.info("💛 You have 2 lives remaining")
 
+# Sidebar with ion reference
+with st.sidebar:
+    st.markdown("### 🔬 Ion Reference Guide")
+    for ion, clues in ions_data.items():
+        for clue in clues:
+            with st.expander(f"{clue['emoji']} {ion} ({clue['reagent']})"):
+                st.write(f"**Color:** {clue['color']}")
+                st.write(f"**Reagent:** {clue['reagent']}")
+                st.write(f"**Condition:** {clue['condition']}")
+                st.write(f"**Description:** {clue['description']}")
+
+    st.markdown("### 🎮 Game Tips")
+    st.markdown("- Higher levels = more points per correct answer")
+    st.markdown("- Streaks multiply your score")
+    st.markdown("- Use the reference guide to study")
+    st.markdown("- Take your time - accuracy matters!")
+
+# Main game logic
 if not st.session_state.game_started:
     st.markdown("### 🎮 Welcome Detective!")
     st.markdown("**How to Play:**")
@@ -225,18 +243,14 @@ else:
         st.markdown("### 🎯 Your Identification:")
         answer = st.selectbox(
             "Which ion matches these lab results?",
+            options=list(ions_data.keys()),
+            key=f"answer_{st.session_state.score}"
+        )
 
-options = list(ions_data.keys())
-key = f"answer_{st.session_state.score}"
-
-col1, col2 = st.columns(2)
-with col1:
-    if st.button("🔬 Submit Analysis", type="primary"):
-        if answer in mystery['correct_answers']:
-            # Correct answer logic
-        else:
-            # Incorrect answer logic
-          
+        col1, col2 = st.columns(2)
+        with col1:
+            if st.button("🔬 Submit Analysis", type="primary"):
+                if answer in mystery['correct_answers']:
                     # Correct answer
                     points = 10 + (st.session_state.level * 5) + (st.session_state.streak * 2)
                     st.session_state.score += points
@@ -262,8 +276,9 @@ with col1:
                     
                     show_animated_result(False)
                     
-                    correct_ion = mystery['correct_answer']
-                    st.info(f"💡 The correct answer was: **{correct_ion}** - {ions_data[correct_ion]['description']}")
+                    # Show correct answer
+                    correct_ion = mystery['correct_answers'][0]  # Fixed: use correct_answers instead of correct_answer
+                    st.info(f"💡 The correct answer was: **{correct_ion}**")
                     
                     # Generate new mystery
                     st.session_state.current_mystery = create_mystery()
@@ -274,17 +289,3 @@ with col1:
                 st.session_state.current_mystery = create_mystery()
                 st.rerun()
 
-# Sidebar with ion reference
-for ion, clues in ions_data.items():
-    for clue in clues:
-        with st.expander(f"{clue['emoji']} {ion} ({clue['reagent']})"):
-            st.write(f"**Color:** {clue['color']}")
-            st.write(f"**Reagent:** {clue['reagent']}")
-            st.write(f"**Condition:** {clue['condition']}")
-            st.write(f"**Description:** {clue['description']}")
-
-    st.markdown("### 🎮 Game Tips")
-    st.markdown("- Higher levels = more points per correct answer")
-    st.markdown("- Streaks multiply your score")
-    st.markdown("- Use the reference guide to study")
-    st.markdown("- Take your time - accuracy matters!")
