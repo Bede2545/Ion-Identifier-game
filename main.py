@@ -111,7 +111,7 @@ ions_data = {
         {
             'color': 'Brown',
             'reagent': 'Ammonia',
-            'condition': 'In drops,then In excess',
+            'condition': 'In drops insoluble In excess',
             'description': 'Brown precipitate Insoluble in excess',
             'emoji': '🤎'
         }
