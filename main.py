@@ -49,7 +49,7 @@ ions_data = {
         'description': 'White precipitate remains insoluble in excess',
         'emoji': '🤍'
     },
-'Aluminium (Al²⁺)': {
+'Aluminium (Al³⁺)': {
         'color': 'White',
         'reagent': 'Sodium hydroxide',
         'condition': 'In drops, soluble In excess',
